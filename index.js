@@ -16,7 +16,7 @@ const CATEGORIES = {
   DEFI: ['LINK', 'YFI', 'YFII', 'BADGER', 'SNX', 'UMA', 'REN', 'NXM', 'AMPL', 'COMP', 'AAVE', 'MKR'],
   CHAIN: ['ATOM', 'DOT', 'ADA', 'EOS', 'TRX', 'NEO', 'KSM', 'WAVES', 'NEAR', 'LUNA', 'OKT'],
   MAINSTREAM: ['BCH', 'BSV', 'LTC', 'DOGE', 'XRP'],
-  CRYPTO: ['XMR', 'DASH', 'ZEC', 'ZEN'],
+  PRIVACY: ['XMR', 'DASH', 'ZEC', 'ZEN'],
   PLATFORM: ['OKB', 'HT', 'BNB'],
   NFT: ['MANA', 'ENJ', 'INJ', 'COCOS'],
   OTHERS: [],
