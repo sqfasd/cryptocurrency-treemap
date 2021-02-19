@@ -20,6 +20,5 @@ export function formatPercent(val) {
 export function getColorByPercentChange(change) {
   const normalized = Math.min(1, Math.abs(change) / 10) // 10% is pure red or green
   const scale = Math.floor(normalized * 255)
-  console.log('change:', change, normalized, scale)
   return change > 0 ? `rgb(${scale}, 0, 0)` : `rgb(0, ${scale}, 0)`
 }

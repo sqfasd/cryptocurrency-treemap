@@ -71,7 +71,6 @@ function build(rawData) {
 
 function render(chart, data) {
   const formatter = (params) => {
-    console.log(params)
     const marketCap = params.value
     const ratio = ((marketCap * 100) / totalMarketCap).toFixed(2)
     if (!params.data.percent_change_24h) {
@@ -85,14 +84,16 @@ function render(chart, data) {
     //   text: '',
     //   left: 'center',
     // },
-    width: '100%',
-    height: '100%',
     tooltip: {},
     series: [
       {
         name: 'ALL',
         type: 'treemap',
         visibleMin: 300,
+        left: '0',
+        top: '0',
+        right: 'left',
+        bottom: 'top',
         label: {
           show: true,
           normal: {
@@ -104,6 +105,13 @@ function render(chart, data) {
           height: 20,
         },
         data,
+        levels: [
+          {
+            itemStyle: {
+              borderColor: 'black',
+            },
+          },
+        ],
       },
     ],
   })
@@ -117,7 +125,6 @@ async function main() {
 
   const rawData = await fetchRawData()
   const data = build(rawData)
-  console.log('data:', data)
   render(theChart, data)
 }
 
